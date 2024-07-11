@@ -1,8 +1,8 @@
 @import './base.css';
+@import '../../node_modules/@patternfly/patternfly/patternfly.css';
 
 #app {
   max-width: 1440px;
-  background-color: aqua;
   margin: auto;
 }
 
