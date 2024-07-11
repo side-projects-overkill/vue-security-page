@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@patternfly/elements": "^3.0.2",
+    "@patternfly/patternfly": "^5.3.1",
+    "@patternfly/pfe-navigation": "^1.12.3",
+    "@patternfly/pfe-styles": "^1.12.3",
     "gh-pages": "^6.1.1",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
