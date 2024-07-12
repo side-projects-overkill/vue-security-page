@@ -20,9 +20,9 @@
             models and weakness patterns to design and build with security as a
             primary objective:
           </p>
-          <ul>
-            <a><li>Software supply chain security assurance</li></a>
-            <a><li>Security testing process</li></a>
+          <ul class="sdl-links-list">
+            <li><a>Software supply chain security assurance</a></li>
+            <li><a>Security testing process</a></li>
           </ul>
         </div>
         <div class="pf-v5-l-grid__item pf-m-0-col pf-m-2-col-on-lg"></div>
@@ -31,12 +31,12 @@
         >
           <h3>About security</h3>
           <ul>
-            <p><a>Life Cycle Security Update Policy</a></p>
-            <p><a>Product Life Cycles</a></p>
-            <p><a>Product Security overview</a></p>
-            <p><a>SDL overview</a></p>
-            <p><a>Security blog </a></p>
-            <p><a>Security glossary</a></p>
+            <li><a>Life Cycle Security Update Policy</a></li>
+            <li><a>Product Life Cycles</a></li>
+            <li><a>Product Security overview</a></li>
+            <li><a>SDL overview</a></li>
+            <li><a>Security blog </a></li>
+            <li><a>Security glossary</a></li>
           </ul>
         </div>
       </div>
@@ -68,19 +68,19 @@
           <div class="pf-v5-l-grid__item pf-m-6-col">
             <h3>Security updates</h3>
             <ul>
-              <p><a>Security advisories</a></p>
-              <p><a>Security bulletins</a></p>
-              <p><a>Security labs</a></p>
+              <li><a>Security advisories</a></li>
+              <li><a>Security bulletins</a></li>
+              <li><a>Security labs</a></li>
             </ul>
           </div>
           <div class="pf-v5-l-grid__item pf-m-6-col">
             <h3>Vulnerabilities</h3>
             <ul>
-              <p><a>CVE database</a></p>
-              <p><a>Incident response plan</a></p>
-              <p><a>Security data</a></p>
-              <p><a>Severity ratings</a></p>
-              <p><a>Vulnerability management</a></p>
+              <li><a>CVE database</a></li>
+              <li><a>Incident response plan</a></li>
+              <li><a>Security data</a></li>
+              <li><a>Severity ratings</a></li>
+              <li><a>Vulnerability management</a></li>
             </ul>
           </div>
         </div>
@@ -121,10 +121,10 @@
         >
           <h3>Security and privacy</h3>
           <ul>
-            <p><a>Articles on PCI DSS</a></p>
-            <p><a>Compliance activities and government standards</a></p>
-            <p><a>Red Hat vulnerability scanner certification</a></p>
-            <p><a>Trust Red Hat</a></p>
+            <li><a>Articles on PCI DSS</a></li>
+            <li><a>Compliance activities and government standards</a></li>
+            <li><a>Red Hat vulnerability scanner certification</a></li>
+            <li><a>Trust Red Hat</a></li>
           </ul>
         </div>
       </div>
@@ -137,6 +137,13 @@
 <style scoped>
 .security-overview > div {
   padding-top: 48px;
+}
+.security-overview li {
+  list-style: none;
+}
+.sdl-links-list li{
+  list-style: disc;
+  color: #06c;
 }
 .prodsec-blog {
   padding: 0px 32px;
