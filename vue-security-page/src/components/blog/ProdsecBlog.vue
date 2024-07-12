@@ -141,7 +141,7 @@
 .security-overview li {
   list-style: none;
 }
-.sdl-links-list li{
+.sdl-links-list li {
   list-style: disc;
   color: #06c;
 }
