@@ -9,9 +9,7 @@
             class="red-hat-logo-img"
           />
         </div>
-        <div class="pf-v5-l-grid__item pf-m-4-col">
-          <pf-icon icon="twitter" set="far"></pf-icon>
-        </div>
+        <div class="pf-v5-l-grid__item pf-m-4-col"></div>
       </div>
     </div>
     <hr />
@@ -64,6 +62,7 @@
         </div>
       </div>
       <div class="all-systems-container">
+        <i class="fa fa-check-circle"></i>
         <p>All Systems Operational</p>
       </div>
     </div>
@@ -74,6 +73,13 @@
       <div class="pf-v5-l-flex__item footer-bottom-text">Jobs</div>
       <div class="pf-v5-l-flex__item footer-bottom-text">Events</div>
       <div class="pf-v5-l-flex__item footer-bottom-text">Locations</div>
+      <div class="pf-v5-l-flex__item footer-bottom-text">Contact Red Hat</div>
+      <div class="pf-v5-l-flex__item footer-bottom-text">Red Hat Blog</div>
+      <div class="pf-v5-l-flex__item footer-bottom-text">
+        Diversity, equity, and inclusion
+      </div>
+      <div class="pf-v5-l-flex__item footer-bottom-text">Cool Stuff Store</div>
+      <div class="pf-v5-l-flex__item footer-bottom-text">Red Hat Summit</div>
     </div>
     <div class="pf-v5-l-flex">
       <div class="pf-v5-l-flex__item footer-bottom-text">
@@ -98,16 +104,6 @@
 
 <script setup>
 import "@patternfly/elements/pf-icon/pf-icon.js";
-import { ref } from "vue";
-
-const quickLinks = ref([
-  "Quick Links",
-  "Downloads",
-  "Subscriptions",
-  "Support Cases",
-  "Customer Service",
-  "Product Documentation",
-]);
 </script>
 
 <style scoped>
@@ -121,6 +117,10 @@ const quickLinks = ref([
   padding: 32px;
 }
 
+.footer-top-container hr {
+  border-color: #404040;
+}
+
 .red-hat-logo-img {
   width: auto;
   height: 40px;
@@ -128,7 +128,6 @@ const quickLinks = ref([
 
 .footer-logo-container {
   padding-bottom: 20px;
-  padding-top: 20px;
 }
 
 .footer-links-container {
@@ -137,14 +136,19 @@ const quickLinks = ref([
 }
 
 .all-systems-container {
-  width: 200px;
+  width: 220px;
   height: 50px;
   border-radius: 5px;
   margin-top: 30px;
+  padding: 0px 10px;
   background-color: #383838;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+
+.all-systems-container i {
+  color: #008000;
 }
 
 .footer-bottom-container {
@@ -159,5 +163,10 @@ const quickLinks = ref([
 
 .footer-bottom-text {
   font-size: 12px;
+}
+
+.footer-bottom-text:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 </style>

@@ -1,4 +1,4 @@
 @import './base.css';
-@import '../../node_modules/@patternfly/patternfly/patternfly.css';
+@import '@patternfly/patternfly/patternfly.css';
 
 
