@@ -23,5 +23,17 @@ export default [
       ecmaVersion: 15,
       sourceType: 'module',
     },
+
+    rules: {
+      'import/extensions': [
+        'error',
+        'ignorePackages',
+        {
+          js: 'always',
+          jsx: 'never',
+          json: 'always',
+        },
+      ],
+    },
   },
 ]

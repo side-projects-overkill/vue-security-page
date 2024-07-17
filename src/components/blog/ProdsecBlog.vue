@@ -138,7 +138,6 @@
 </template>
 
 <script setup>
-  // eslint-disable-next-line import/extensions
   import '@patternfly/elements/pf-card/pf-card.js'
 </script>
 
