@@ -1,8 +1,11 @@
 {
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended",
-    "airbnb",
+    "plugin:vue/recommended",
+    "airbnb-base",
     "plugin:prettier/recommended"
-  ]
+  ],
+  "parserOptions": {
+    "sourceType": "module"
+  }
 }

@@ -1,10 +1,9 @@
-<script setup>
-import ProdsecBlogVue from "./components/blog/ProdsecBlog.vue";
-</script>
-
 <template>
-    <ProdsecBlogVue/>
+  <ProdsecBlogVue />
 </template>
 
-<style scoped>
-</style>
+<script setup>
+  import ProdsecBlogVue from './components/blog/ProdsecBlog.vue'
+</script>
+
+<style scoped></style>

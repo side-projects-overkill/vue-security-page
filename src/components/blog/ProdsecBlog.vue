@@ -63,7 +63,10 @@
           </p>
         </div>
         <div class="pf-v5-l-grid__item pf-m-0-col pf-m-2-col-on-lg"></div>
-        <pf-card rounded class="pf-m-12-col pf-m-4-col-on-lg overview-security-card">
+        <pf-card
+          rounded
+          class="pf-m-12-col pf-m-4-col-on-lg overview-security-card"
+        >
           <div class="pf-v5-l-grid pf-m-all-6-col">
             <div>
               <h3 class="card-header">Security updates</h3>
@@ -135,55 +138,56 @@
 </template>
 
 <script setup>
-import "@patternfly/elements/pf-card/pf-card.js";
+  // eslint-disable-next-line import/extensions
+  import '@patternfly/elements/pf-card/pf-card.js'
 </script>
 
 <style scoped>
-.overview-security-card {
-  border-top: 3px solid #0066cc;
-  height: min-content;
-}
+  .overview-security-card {
+    border-top: 3px solid #0066cc;
+    height: min-content;
+  }
 
-.security-overview > div {
-  padding-top: 48px;
-}
+  .security-overview > div {
+    padding-top: 48px;
+  }
 
-.security-overview li {
-  list-style: none;
-}
+  .security-overview li {
+    list-style: none;
+  }
 
-.overview-security-card ul {
-  padding-inline-start: 0;
-  margin-inline-start: 0;
-}
+  .overview-security-card ul {
+    padding-inline-start: 0;
+    margin-inline-start: 0;
+  }
 
-.card-header{
-  padding: 24px 0px 16px 0px;
-}
+  .card-header {
+    padding: 24px 0px 16px 0px;
+  }
 
-.sdl-links-list li {
-  list-style: disc;
-  color: #06c;
-}
+  .sdl-links-list li {
+    list-style: disc;
+    color: #06c;
+  }
 
-.prodsec-blog {
-  padding: 0px 32px;
-}
+  .prodsec-blog {
+    padding: 0px 32px;
+  }
 
-.heading {
-  font-weight: 400;
-  font-size: 18px;
-  padding-top: 48px;
-}
+  .heading {
+    font-weight: 400;
+    font-size: 18px;
+    padding-top: 48px;
+  }
 
-.headline {
-  font-weight: 600;
-  font-size: 28px;
-  font-family: "Red Hat Display", sans-serif;
-}
+  .headline {
+    font-weight: 600;
+    font-size: 28px;
+    font-family: 'Red Hat Display', sans-serif;
+  }
 
-h2 {
-  font-weight: 500;
-  font-size: 24px;
-}
+  h2 {
+    font-weight: 500;
+    font-size: 24px;
+  }
 </style>
