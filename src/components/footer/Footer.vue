@@ -85,11 +85,11 @@
       <div class="footer-accordion-container">
         <div class="pf-v5-l-flex pf-m-column">
           <div class="pf-v5-l-flex__item accordion-item">
-            <Accordion title="Quick Links" />
-            <Accordion title="Help" />
-            <Accordion title="Site Info" />
-            <Accordion title="Related Sites" />
-            <Accordion title="About" />
+            <AccordionItem title="Quick Links" />
+            <AccordionItem title="Help" />
+            <AccordionItem title="Site Info" />
+            <AccordionItem title="Related Sites" />
+            <AccordionItem title="About" />
           </div>
         </div>
       </div>
@@ -124,7 +124,7 @@
 <script setup>
 import "@patternfly/elements/pf-icon/pf-icon.js";
 import { footerLinks } from "@/components/footer/linksData";
-import Accordion from "@/components/footer/Accordion.vue";
+import AccordionItem from "@/components/footer/AccordionItem.vue";
 </script>
 
 <style scoped>

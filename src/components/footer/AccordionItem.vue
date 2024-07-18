@@ -29,7 +29,7 @@
 <script setup>
 import "@patternfly/elements/pf-accordion/pf-accordion.js";
 import { footerLinks } from "./linksData";
-import { computed } from "@vue/reactivity";
+import { computed } from "vue";
 
 const props = defineProps({
   title: String,
@@ -37,15 +37,15 @@ const props = defineProps({
 
 const currentLinks = computed(() => {
   switch (props.title) {
-    case 'Quick Links':
+    case "Quick Links":
       return footerLinks.quickLinks;
-    case 'Help':
+    case "Help":
       return footerLinks.helpLinks;
-    case 'Site Info':
+    case "Site Info":
       return footerLinks.siteInfoLinks;
-    case 'Related Sites':
+    case "Related Sites":
       return footerLinks.relatedSiteLinks;
-    case 'About':
+    case "About":
       return footerLinks.aboutLinks;
     default:
       return [];
@@ -85,5 +85,4 @@ const currentLinks = computed(() => {
     font-size: 15px;
   }
 }
-
 </style>

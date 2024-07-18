@@ -25,13 +25,34 @@
       <div
         class="pf-v5-l-grid__item pf-m-1-col pf-m-4-col-on-sm pf-m-3-col-on-md pf-m-5-col-on-lg pf-m-7-col-on-xl"
       >
-        <div class="menu-container pf-v5-l-flex">
+        <div class="pf-v5-l-flex menu-container">
           <div
             class="pf-v5-l-flex__item menu-item"
-            v-for="item in menuItems"
-            :key="item"
+            :class="{ active: activeMenuItem === 'Product' }"
+            @click="toggleActiveMenuItem('Product')"
           >
-            <p>{{ item }}</p>
+            <TextMenuItem menuTitle="Product" />
+          </div>
+          <div
+            class="pf-v5-l-flex__item menu-item"
+            :class="{ active: activeMenuItem === 'Knowledge' }"
+            @click="toggleActiveMenuItem('Knowledge')"
+          >
+            <TextMenuItem menuTitle="Knowledge" />
+          </div>
+          <div
+            class="pf-v5-l-flex__item menu-item"
+            :class="{ active: activeMenuItem === 'Security' }"
+            @click="toggleActiveMenuItem('Security')"
+          >
+            <TextMenuItem menuTitle="Security" />
+          </div>
+          <div
+            class="pf-v5-l-flex__item menu-item"
+            :class="{ active: activeMenuItem === 'Support' }"
+            @click="toggleActiveMenuItem('Support')"
+          >
+            <TextMenuItem menuTitle="Support" />
           </div>
           <div class="pf-v5-l-grid hamburger-menu">
             <i class="fa fa-bars"></i>
@@ -45,8 +66,7 @@
       >
         <div class="pf-v5-l-flex pf-m-justify-content-flex-end">
           <div class="pf-v5-l-flex__item header-navigation-item menu-item">
-            <i class="fa fa-search"></i>
-            <p class="navigation-item-text">Search</p>
+            <SearchModal/>
           </div>
           <div class="pf-v5-l-flex__item header-navigation-item menu-item">
             <i class="fa fa-clock"></i>
@@ -67,7 +87,16 @@
 </template>
 
 <script setup>
+
 import { ref } from "vue";
+import TextMenuItem from "./TextMenuItem.vue";
+import SearchModal from "./SearchModal.vue"
+
+const activeMenuItem = ref(null);
+
+const toggleActiveMenuItem = (menuItem) => {
+  activeMenuItem.value = activeMenuItem.value === menuItem ? null : menuItem;
+};
 
 const headerTopItems = ref([
   "Subscriptions",
@@ -75,8 +104,6 @@ const headerTopItems = ref([
   "Red Hat Console",
   "Get Support",
 ]);
-
-const menuItems = ref(["Products", "Knowledge", "Security", "Support"]);
 </script>
 
 <style scoped>
@@ -114,20 +141,23 @@ const menuItems = ref(["Products", "Knowledge", "Security", "Support"]);
 }
 
 .menu-container {
-  height: 70px;
-  font-size: 18px;
-  color: #f3f3f3;
+  font-size: 16px;
 }
 
 .menu-item {
   border-top: 3px solid #151515;
   border-radius: 3px;
-  padding-top: 22px;
+  padding: 22px 2px;
 }
 
 .menu-item:hover {
   border-top: 3px solid #e00;
   cursor: pointer;
+}
+
+.menu-item.active {
+  background-color: #fff;
+  color: #000;
 }
 
 .hamburger-menu {
