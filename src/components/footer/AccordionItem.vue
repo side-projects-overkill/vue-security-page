@@ -1,5 +1,5 @@
 <template>
-  <div class="accordion-main-continaer">
+  <div class="accordion-main-container">
     <pf-accordion class="accordion-header-container">
       <pf-accordion-header class="accordion-header">
         <h3>{{ title }}</h3>
@@ -54,11 +54,11 @@ const currentLinks = computed(() => {
 </script>
 
 <style scoped>
-.accordion-main-continaer {
+.accordion-main-container {
   padding-top: 10px;
 }
 
-.accordion-main-continaer hr {
+.accordion-main-container hr {
   border-color: #707070;
 }
 

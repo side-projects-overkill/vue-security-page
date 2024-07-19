@@ -55,8 +55,7 @@
             <TextMenuItem menuTitle="Support" />
           </div>
           <div class="pf-v5-l-grid hamburger-menu">
-            <i class="fa fa-bars"></i>
-            <p class="navigation-item-text">Menu</p>
+            <HamburgerMenuModal/>
           </div>
         </div>
       </div>
@@ -69,8 +68,7 @@
             <SearchModal/>
           </div>
           <div class="pf-v5-l-flex__item header-navigation-item menu-item">
-            <i class="fa fa-clock"></i>
-            <p class="navigation-item-text">English</p>
+            <EnglishModal/>
           </div>
           <div class="pf-v5-l-flex__item header-navigation-item menu-item">
             <i class="fa fa-th"></i>
@@ -91,6 +89,8 @@
 import { ref } from "vue";
 import TextMenuItem from "./TextMenuItem.vue";
 import SearchModal from "./SearchModal.vue"
+import HamburgerMenuModal from "./HamburgerMenuModal.vue"
+import EnglishModal from "./EnglishModal.vue"
 
 const activeMenuItem = ref(null);
 

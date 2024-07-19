@@ -39,7 +39,7 @@ import { headerLinks } from "./headerLinksData";
 
 defineProps({
   menuTitle: String,
-  uniqueId: String,
+  linksdata : Object,
 });
 
 const formatTitle = (key) => {
