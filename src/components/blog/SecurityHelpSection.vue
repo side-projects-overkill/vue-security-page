@@ -146,21 +146,20 @@
     pfSelectgroup.shadowRoot.getElementById(
       'listbox-container',
     ).style.boxShadow = '0px 3px 10px rgba(0,0,0,.2),0px 3px 8px rgba(0,0,0,.2)'
-  }, 2000)
+  }, 1000)
 </script>
 
 <style scoped>
   .shl-mainContainer {
     margin-top: 64px;
   }
+
   .shl-mainContainer > div {
     margin-top: 64px;
   }
-  .security-guide-select {
-    max-width: 559px;
-    &:first-child {
-      padding: 16px;
-    }
+
+  #security-dropdown {
+    max-width: 642px;
   }
 
   .knowledge-cases {
@@ -175,10 +174,6 @@
 
   .knowledge-cases-update {
     color: #6a6e73;
-  }
-
-  #security-dropdown {
-    max-width: 642px;
   }
 
   rh-card {
