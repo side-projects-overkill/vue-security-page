@@ -26,10 +26,11 @@
           </ul>
         </div>
         <div class="pf-v5-l-grid__item pf-m-0-col pf-m-2-col-on-lg"></div>
-        <div
+        <pf-card
+          rounded
           class="pf-v5-l-grid__item pf-m-12-col pf-m-4-col-on-lg overview-security-card"
         >
-          <h3>About security</h3>
+          <h3 class="card-header">About security</h3>
           <ul>
             <li><a>Life Cycle Security Update Policy</a></li>
             <li><a>Product Life Cycles</a></li>
@@ -38,7 +39,7 @@
             <li><a>Security blog </a></li>
             <li><a>Security glossary</a></li>
           </ul>
-        </div>
+        </pf-card>
       </div>
 
       <div class="pf-v5-l-grid pf-m-all-6-col-on-md pf-m-gutter">
@@ -62,28 +63,31 @@
           </p>
         </div>
         <div class="pf-v5-l-grid__item pf-m-0-col pf-m-2-col-on-lg"></div>
-        <div
-          class="pf-v5-l-grid__item pf-m-12-col pf-m-4-col-on-lg pf-v5-l-grid overview-security-card"
+        <pf-card
+          rounded
+          class="pf-m-12-col pf-m-4-col-on-lg overview-security-card"
         >
-          <div class="pf-v5-l-grid__item pf-m-6-col">
-            <h3>Security updates</h3>
-            <ul>
-              <li><a>Security advisories</a></li>
-              <li><a>Security bulletins</a></li>
-              <li><a>Security labs</a></li>
-            </ul>
+          <div class="pf-v5-l-grid pf-m-all-6-col">
+            <div>
+              <h3 class="card-header">Security updates</h3>
+              <ul>
+                <li><a>Security advisories</a></li>
+                <li><a>Security bulletins</a></li>
+                <li><a>Security labs</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="card-header">Vulnerabilities</h3>
+              <ul>
+                <li><a>CVE database</a></li>
+                <li><a>Incident response plan</a></li>
+                <li><a>Security data</a></li>
+                <li><a>Severity ratings</a></li>
+                <li><a>Vulnerability management</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="pf-v5-l-grid__item pf-m-6-col">
-            <h3>Vulnerabilities</h3>
-            <ul>
-              <li><a>CVE database</a></li>
-              <li><a>Incident response plan</a></li>
-              <li><a>Security data</a></li>
-              <li><a>Severity ratings</a></li>
-              <li><a>Vulnerability management</a></li>
-            </ul>
-          </div>
-        </div>
+        </pf-card>
       </div>
 
       <div class="pf-v5-l-grid pf-m-all-6-col-on-md pf-m-gutter">
@@ -116,61 +120,73 @@
           </p>
         </div>
         <div class="pf-v5-l-grid__item pf-m-0-col pf-m-2-col-on-lg"></div>
-        <div
+        <pf-card
+          rounded
           class="pf-v5-l-grid__item pf-m-12-col pf-m-4-col-on-lg overview-security-card"
         >
-          <h3>Security and privacy</h3>
+          <h3 class="card-header">Security and privacy</h3>
           <ul>
             <li><a>Articles on PCI DSS</a></li>
             <li><a>Compliance activities and government standards</a></li>
             <li><a>Red Hat vulnerability scanner certification</a></li>
             <li><a>Trust Red Hat</a></li>
           </ul>
-        </div>
+        </pf-card>
       </div>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+  import '@patternfly/elements/pf-card/pf-card.js'
+</script>
 
 <style scoped>
-.security-overview > div {
-  padding-top: 48px;
-}
-.security-overview li {
-  list-style: none;
-}
-.sdl-links-list li {
-  list-style: disc;
-  color: #06c;
-}
-.prodsec-blog {
-  padding: 0px 32px;
-}
-.heading {
-  font-weight: 400;
-  font-size: 18px;
-  padding-top: 48px;
-}
-.headline {
-  font-weight: 600;
-  font-size: 28px;
-  font-family: "Red Hat Display", sans-serif;
-}
-h2 {
-  font-weight: 500;
-  font-size: 24px;
-}
-.overview-security-card {
-  height: min-content;
-  padding: 24px 0px 24px 24px;
-  border: 1px solid#D2D2D2;
-  border-radius: 3px;
-  border-top: 3px solid #0066cc;
-}
-.overview-security-card ul {
-  padding-inline-start: 0;
-  margin-inline-start: 0;
-}
+  .overview-security-card {
+    border-top: 3px solid #0066cc;
+    height: min-content;
+  }
+
+  .security-overview > div {
+    padding-top: 48px;
+  }
+
+  .security-overview li {
+    list-style: none;
+  }
+
+  .overview-security-card ul {
+    padding-inline-start: 0;
+    margin-inline-start: 0;
+  }
+
+  .card-header {
+    padding: 24px 0px 16px 0px;
+  }
+
+  .sdl-links-list li {
+    list-style: disc;
+    color: #06c;
+  }
+
+  .prodsec-blog {
+    padding: 0px 32px;
+  }
+
+  .heading {
+    font-weight: 400;
+    font-size: 18px;
+    padding-top: 48px;
+  }
+
+  .headline {
+    font-weight: 600;
+    font-size: 28px;
+    font-family: 'Red Hat Display', sans-serif;
+  }
+
+  h2 {
+    font-weight: 500;
+    font-size: 24px;
+  }
 </style>

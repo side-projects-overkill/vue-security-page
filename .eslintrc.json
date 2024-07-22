@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/recommended",
+    "airbnb-base",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "always",
+        "jsx": "never",
+        "json": "always"
+      }
+    ]
+  }
+}
