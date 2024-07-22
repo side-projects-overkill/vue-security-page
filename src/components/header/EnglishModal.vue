@@ -4,14 +4,10 @@
     position="top"
     class="english-modal-container"
   >
-  <p>Select Your Language</p>
-  <ul>
-    <li>English</li>
-    <li>Français</li>
-    <li>한국어</li>
-    <li>日本語</li>
-    <li>中文 (中国)</li>
-  </ul>
+    <p>Select Your Language</p>
+    <ul>
+      <li v-for="item in languages" :key="item.text">{{ item }}</li>
+    </ul>
   </pf-modal>
   <pf-button id="english-trigger" @click="toggleModal">
     <i class="fa fa-clock"></i>
@@ -19,7 +15,9 @@
   </pf-button>
 </template>
 
-<script setup></script>
+<script setup>
+const languages = ["English", "Français", "한국어", "日本語", "中文 (中国)"];
+</script>
 
 <style scoped>
 .english-modal-container::part(dialog) {
@@ -36,22 +34,13 @@
   top: 120px;
 }
 
-.english-modal-container section{
-  left: 335px
-}
-
-.english-modal-container p{
+.english-modal-container p {
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 20px;
 }
 
-.english-modal-container p{
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.english-modal-container li{
+.english-modal-container li {
   font-size: 16px;
   color: #06c;
 }

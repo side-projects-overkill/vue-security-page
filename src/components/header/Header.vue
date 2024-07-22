@@ -72,7 +72,7 @@
           </div>
           <div class="pf-v5-l-flex__item header-navigation-item menu-item">
             <i class="fa fa-th"></i>
-            <p class="navigation-item-text">All Red hat</p>
+            <p class="navigation-item-text">All Red Hat</p>
           </div>
           <div class="pf-v5-l-flex__item header-navigation-item menu-item">
             <i class="fa fa-user"></i>
@@ -98,7 +98,7 @@ import HamburgerMenuModal from "./HamburgerMenuModal.vue";
 import EnglishModal from "./EnglishModal.vue";
 
 const activeMenuItem = ref(null);
-
+//Function to toggle menu items according to change in state
 const toggleActiveMenuItem = (menuItem) => {
   activeMenuItem.value = activeMenuItem.value === menuItem ? null : menuItem;
 };
@@ -179,7 +179,7 @@ const headerTopItems = ref([
 
 .header-navigation-item a {
   color: #fff;
-  text-decoration: none
+  text-decoration: none;
 }
 
 @media screen and (max-width: 1199px) {

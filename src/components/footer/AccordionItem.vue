@@ -32,10 +32,12 @@ import { footerLinks } from "./linksData";
 import { computed } from "vue";
 
 const props = defineProps({
+  //Props for Menu Title
   title: String,
 });
 
 const currentLinks = computed(() => {
+  //Case statements for displaying links data according to menu title
   switch (props.title) {
     case "Quick Links":
       return footerLinks.quickLinks;
@@ -54,18 +56,8 @@ const currentLinks = computed(() => {
 </script>
 
 <style scoped>
-.accordion-main-container {
-  padding-top: 10px;
-}
-
 .accordion-main-container hr {
   border-color: #707070;
-}
-
-.toggle,
-.toggle:before,
-.toggle:after {
-  background-color: #151515;
 }
 
 .accordion-header-container {

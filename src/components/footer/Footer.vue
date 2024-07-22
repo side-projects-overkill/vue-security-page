@@ -84,12 +84,12 @@
       </div>
       <div class="footer-accordion-container">
         <div class="pf-v5-l-flex pf-m-column">
-          <div class="pf-v5-l-flex__item accordion-item">
-            <AccordionItem title="Quick Links" />
-            <AccordionItem title="Help" />
-            <AccordionItem title="Site Info" />
-            <AccordionItem title="Related Sites" />
-            <AccordionItem title="About" />
+          <div
+            class="pf-v5-l-flex__item accordion-item"
+            v-for="item in accordianItem"
+            :key="item.text"
+          >
+            <AccordionItem :title="item" />
           </div>
         </div>
       </div>
@@ -125,6 +125,14 @@
 import "@patternfly/elements/pf-icon/pf-icon.js";
 import { footerLinks } from "@/components/footer/linksData";
 import AccordionItem from "@/components/footer/AccordionItem.vue";
+
+const accordianItem = [
+  "Quick Links",
+  "Help",
+  "Site Info",
+  "Related Sites",
+  "About",
+];
 </script>
 
 <style scoped>
@@ -208,10 +216,6 @@ import AccordionItem from "@/components/footer/AccordionItem.vue";
 @media screen and (max-width: 991px) {
   .footer-accordion-container {
     display: block;
-  }
-
-  .accordion-item {
-    padding: 16px 24px;
   }
 
   .footer-links-container {

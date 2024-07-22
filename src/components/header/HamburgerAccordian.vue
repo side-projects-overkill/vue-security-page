@@ -3,7 +3,7 @@
     <pf-accordion>
       <pf-accordion-header>
         <h3>{{ menuTitle }}</h3>
-      </pf-accordion-header>  
+      </pf-accordion-header>
       <pf-accordion-panel>
         <div class="pf-v5-l-grid pf-m-gutter">
           <div
