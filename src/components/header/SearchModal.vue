@@ -21,20 +21,24 @@
 <script></script>
 
 <style scoped>
-.search-modal-container::part(dialog) {
+pf-modal::part(dialog) {
   margin-inline: 0;
   color: black;
   margin-top: 115px;
   box-shadow: none;
 }
 
-.search-modal-container::part(overlay) {
+pf-modal::part(overlay) {
   height: 80%;
   top: 340px;
 }
 
-.search-input {
+pf-modal input{
   width: 100%;
   margin-bottom: 20px;
+}
+
+pf-modal p,a {
+  font-size: 17px;
 }
 </style>

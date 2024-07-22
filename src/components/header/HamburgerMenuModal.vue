@@ -1,9 +1,5 @@
 <template>
-  <pf-modal
-    trigger="hamburgermenu-trigger"
-    position="top"
-    class="hamburger-menu-modal-container"
-  >
+  <pf-modal trigger="hamburgermenu-trigger" position="top">
     <HamburgerAccordian menuTitle="Product" :linksData="headerLinks.product" />
     <HamburgerAccordian
       menuTitle="Knowledge"
@@ -27,14 +23,14 @@ import HamburgerAccordian from "./HamburgerAccordian.vue";
 </script>
 
 <style scoped>
-.hamburger-menu-modal-container::part(dialog) {
+pf-modal::part(dialog) {
   margin-inline: 0;
   color: black;
   margin-top: 115px;
   box-shadow: none;
 }
 
-.hamburger-menu-modal-container::part(overlay) {
+pf-modal::part(overlay) {
   height: 80%;
   top: 340px;
 }

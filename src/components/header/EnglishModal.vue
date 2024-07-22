@@ -1,15 +1,11 @@
 <template>
-  <pf-modal
-    trigger="english-trigger"
-    position="top"
-    class="english-modal-container"
-  >
+  <pf-modal trigger="english-trigger" position="top">
     <p>Select Your Language</p>
-    <ul>
-      <li v-for="item in languages" :key="item.text">{{ item }}</li>
-    </ul>
+    <div v-for="item in languages" :key="item.text" class="pf-v5-l-flex">
+      {{ item }}
+    </div>
   </pf-modal>
-  <pf-button id="english-trigger" @click="toggleModal">
+  <pf-button id="english-trigger">
     <i class="fa fa-clock"></i>
     <p class="navigation-item-text">English</p>
   </pf-button>
@@ -20,7 +16,7 @@ const languages = ["English", "Français", "한국어", "日本語", "中文 (�
 </script>
 
 <style scoped>
-.english-modal-container::part(dialog) {
+pf-modal::part(dialog) {
   margin-inline: 0;
   color: black;
   margin-top: 120px;
@@ -29,18 +25,19 @@ const languages = ["English", "Français", "한국어", "日本語", "中文 (�
   margin-left: 68%;
 }
 
-.english-modal-container::part(overlay) {
+pf-modal::part(overlay) {
   height: 90%;
   top: 120px;
 }
 
-.english-modal-container p {
+pf-modal p {
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 20px;
+  text-align: start;
 }
 
-.english-modal-container li {
+pf-modal div {
   font-size: 16px;
   color: #06c;
 }

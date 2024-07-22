@@ -1,6 +1,6 @@
 <template>
   <div>
-    <pf-modal :trigger="menuTitle" class="modal-container" position="top">
+    <pf-modal :trigger="menuTitle"  position="top">
       <div class="pf-v5-l-grid pf-m-gutter">
         <div class="pf-v5-l-grid__item pf-m-2-col"></div>
         <div class="pf-v5-l-grid__item pf-m-8-col">
@@ -50,15 +50,20 @@ const formatTitle = (key) => {
 </script>
 
 <style scoped>
-.modal-container::part(dialog) {
+pf-modal::part(dialog) {
   margin-inline: 0;
   color: black;
   margin-top: 115px;
   box-shadow: none;
 }
 
-.modal-container::part(overlay) {
+pf-modal::part(overlay) {
   height: 80%;
   top: 340px;
+}
+
+pf-modal p{
+  font-size: 17px;
+  font-weight: 400;
 }
 </style>

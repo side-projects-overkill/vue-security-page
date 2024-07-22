@@ -9,7 +9,7 @@
         <p>{{ item }}</p>
       </div>
     </div>
-    <hr class="header-hr" />
+    <hr />
     <div class="pf-v5-l-grid pf-m-gutter-on-sm">
       <div
         class="pf-v5-l-grid__item pf-m-9-col pf-m-4-col-on-sm pf-m-3-col-on-md pf-m-3-col-on-lg pf-m-2-col-on-xl"
@@ -18,7 +18,6 @@
           <img
             src="https://access.redhat.com/chrome_themes/nimbus/img/red-hat-customer-portal.svg"
             alt="Red Hat Logo"
-            class="red-hat-logo-image"
           />
         </div>
       </div>
@@ -28,31 +27,10 @@
         <div class="pf-v5-l-flex menu-container">
           <div
             class="pf-v5-l-flex__item menu-item"
-            :class="{ active: activeMenuItem === 'Product' }"
-            @click="toggleActiveMenuItem('Product')"
+            v-for="item in textMenuItems"
+            :key="item"
           >
-            <TextMenuItem menuTitle="Product" />
-          </div>
-          <div
-            class="pf-v5-l-flex__item menu-item"
-            :class="{ active: activeMenuItem === 'Knowledge' }"
-            @click="toggleActiveMenuItem('Knowledge')"
-          >
-            <TextMenuItem menuTitle="Knowledge" />
-          </div>
-          <div
-            class="pf-v5-l-flex__item menu-item"
-            :class="{ active: activeMenuItem === 'Security' }"
-            @click="toggleActiveMenuItem('Security')"
-          >
-            <TextMenuItem menuTitle="Security" />
-          </div>
-          <div
-            class="pf-v5-l-flex__item menu-item"
-            :class="{ active: activeMenuItem === 'Support' }"
-            @click="toggleActiveMenuItem('Support')"
-          >
-            <TextMenuItem menuTitle="Support" />
+            <TextMenuItem :menuTitle="item" />
           </div>
           <div class="pf-v5-l-grid hamburger-menu">
             <HamburgerMenuModal />
@@ -71,8 +49,7 @@
             <EnglishModal />
           </div>
           <div class="pf-v5-l-flex__item header-navigation-item menu-item">
-            <i class="fa fa-th"></i>
-            <p class="navigation-item-text">All Red Hat</p>
+            <AllRedHatModal />
           </div>
           <div class="pf-v5-l-flex__item header-navigation-item menu-item">
             <i class="fa fa-user"></i>
@@ -91,24 +68,20 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
 import TextMenuItem from "./TextMenuItem.vue";
 import SearchModal from "./SearchModal.vue";
 import HamburgerMenuModal from "./HamburgerMenuModal.vue";
 import EnglishModal from "./EnglishModal.vue";
+import AllRedHatModal from "./AllRedHatModal.vue";
 
-const activeMenuItem = ref(null);
-//Function to toggle menu items according to change in state
-const toggleActiveMenuItem = (menuItem) => {
-  activeMenuItem.value = activeMenuItem.value === menuItem ? null : menuItem;
-};
-
-const headerTopItems = ref([
+const headerTopItems = [
   "Subscriptions",
   "Downloads",
   "Red Hat Console",
   "Get Support",
-]);
+];
+
+const textMenuItems = ["Product", "Knowledge", "Security", "Support"];
 </script>
 
 <style scoped>
@@ -119,6 +92,16 @@ const headerTopItems = ref([
   height: 120px;
   padding: 0 32px;
   align-items: center;
+}
+
+.header-container hr {
+  border-color: #404040;
+}
+
+.header-container img {
+  padding: 15px 16px 10px 0;
+  height: 65px;
+  width: 260px;
 }
 
 .header-top-container {
@@ -135,16 +118,6 @@ const headerTopItems = ref([
   cursor: pointer;
 }
 
-.header-hr {
-  border-color: #404040;
-}
-
-.red-hat-logo-image {
-  padding: 15px 16px 10px 0;
-  height: 65px;
-  width: 260px;
-}
-
 .menu-container {
   font-size: 16px;
 }
@@ -158,11 +131,6 @@ const headerTopItems = ref([
 .menu-item:hover {
   border-top: 3px solid #e00;
   cursor: pointer;
-}
-
-.menu-item.active {
-  background-color: #fff;
-  color: #000;
 }
 
 .hamburger-menu {
