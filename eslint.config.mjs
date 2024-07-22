@@ -12,6 +12,9 @@ const compat = new FlatCompat({
 })
 
 export default [
+  {
+    ignores: ['**/dist/'],
+  },
   ...compat.extends(
     'eslint:recommended',
     'plugin:vue/recommended',
@@ -34,6 +37,7 @@ export default [
           json: 'always',
         },
       ],
+
       'import/no-unresolved': 'off',
     },
   },
