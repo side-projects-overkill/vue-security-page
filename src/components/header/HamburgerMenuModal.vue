@@ -18,7 +18,7 @@
   <pf-button id="hamburgermenu-trigger">
     <i class="fa fa-bars"></i>
     <p class="navigation-item-text">Menu</p>
-  </pf-button>S
+  </pf-button>
 </template>
 
 <script setup>
