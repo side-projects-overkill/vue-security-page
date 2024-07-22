@@ -34,6 +34,7 @@ export default [
           json: 'always',
         },
       ],
+      'import/no-unresolved': 'off',
     },
   },
 ]
