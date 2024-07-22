@@ -28,6 +28,7 @@
   margin-top: 120px;
   box-shadow: none;
   width: 170px;
+  margin-left: 68%;
 }
 
 .english-modal-container::part(overlay) {

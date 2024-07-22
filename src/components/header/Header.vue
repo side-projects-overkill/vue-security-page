@@ -55,7 +55,7 @@
             <TextMenuItem menuTitle="Support" />
           </div>
           <div class="pf-v5-l-grid hamburger-menu">
-            <HamburgerMenuModal/>
+            <HamburgerMenuModal />
           </div>
         </div>
       </div>
@@ -65,10 +65,10 @@
       >
         <div class="pf-v5-l-flex pf-m-justify-content-flex-end">
           <div class="pf-v5-l-flex__item header-navigation-item menu-item">
-            <SearchModal/>
+            <SearchModal />
           </div>
           <div class="pf-v5-l-flex__item header-navigation-item menu-item">
-            <EnglishModal/>
+            <EnglishModal />
           </div>
           <div class="pf-v5-l-flex__item header-navigation-item menu-item">
             <i class="fa fa-th"></i>
@@ -76,7 +76,13 @@
           </div>
           <div class="pf-v5-l-flex__item header-navigation-item menu-item">
             <i class="fa fa-user"></i>
-            <p class="navigation-item-text">Log In</p>
+            <p>
+              <a
+                href="https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/auth?client_id=customer-portal&redirect_uri=https%3A%2F%2Faccess.redhat.com%2Fservices%2Fprimer%2Fsession%2Fscribe%2F%3FredirectTo%3Dhttps%253A%252F%252Faccess.redhat.com%252Fsecurity%252F&state=c16407e4-116f-4ab7-bf0f-78ffa1458b0e&response_mode=fragment&response_type=code&scope=openid&nonce=3d6ee158-f4fa-4e50-8ca2-eece93d685be"
+                class="navigation-item-text"
+                >Log In</a
+              >
+            </p>
           </div>
         </div>
       </div>
@@ -85,12 +91,11 @@
 </template>
 
 <script setup>
-
 import { ref } from "vue";
 import TextMenuItem from "./TextMenuItem.vue";
-import SearchModal from "./SearchModal.vue"
-import HamburgerMenuModal from "./HamburgerMenuModal.vue"
-import EnglishModal from "./EnglishModal.vue"
+import SearchModal from "./SearchModal.vue";
+import HamburgerMenuModal from "./HamburgerMenuModal.vue";
+import EnglishModal from "./EnglishModal.vue";
 
 const activeMenuItem = ref(null);
 
@@ -170,6 +175,11 @@ const headerTopItems = ref([
 .header-navigation-item {
   text-align: center;
   padding-top: 10px;
+}
+
+.header-navigation-item a {
+  color: #fff;
+  text-decoration: none
 }
 
 @media screen and (max-width: 1199px) {
