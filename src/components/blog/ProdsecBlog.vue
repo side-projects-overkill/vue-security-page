@@ -90,6 +90,8 @@
         </pf-card>
       </div>
 
+      <CveTable />
+
       <div class="pf-v5-l-grid pf-m-all-6-col-on-md pf-m-gutter">
         <div class="pf-v5-l-grid__item pf-m-12-col pf-m-6-col-on-lg">
           <h2>Compliance and risk</h2>
@@ -134,21 +136,33 @@
         </pf-card>
       </div>
     </div>
+    <SecurityHelpSection />
   </div>
 </template>
 
 <script setup>
   import '@patternfly/elements/pf-card/pf-card.js'
+  import CveTable from './CveTable.vue'
+  import SecurityHelpSection from './SecurityHelpSection.vue'
 </script>
 
 <style scoped>
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  .prodsec-blog {
+    padding: 0px 32px;
+    max-width: 1440px;
+    margin: auto;
+  }
   .overview-security-card {
     border-top: 3px solid #0066cc;
     height: min-content;
   }
 
   .security-overview > div {
-    padding-top: 48px;
+    margin-top: 64px;
   }
 
   .security-overview li {
@@ -162,15 +176,13 @@
 
   .card-header {
     padding: 24px 0px 16px 0px;
+    font-size: 20px;
+    font-weight: 500;
   }
 
   .sdl-links-list li {
     list-style: disc;
     color: #06c;
-  }
-
-  .prodsec-blog {
-    padding: 0px 32px;
   }
 
   .heading {
