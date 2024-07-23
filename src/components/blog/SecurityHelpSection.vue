@@ -1,5 +1,5 @@
 <template>
-  <div class="shl-mainContainer">
+  <div class="shl-mainContainer pf-v5-c-content">
     <h1>Secrity help and learning</h1>
     <div class="security-dropdown-container">
       <h2>Security Guides</h2>
@@ -53,8 +53,7 @@
           subscription management.
         </p>
         <rh-cta slot="footer">
-          <a
-            href="https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/auth?response_type=code&client_id=https%3A%2F%2Fwww.redhat.com%2Fwapps%2Fugc-oidc&redirect_uri=https%3A%2F%2Fwww.redhat.com%2Fwapps%2Fugc%2Fsso%2Flogin&state=ac355c1d-09be-4834-aa49-d7a6135a0143&login=true&scope=openid"
+          <a href="https://www.redhat.com/wapps/ugc/protected/notif.html"
             >Notification preferences</a
           >
         </rh-cta>
@@ -85,8 +84,7 @@
           Your correspondence with us will be kept in the strictest confidence.
         </p>
         <rh-cta slot="footer">
-          <a
-            href="https://www.redhat.com/en/trust/RFC-2350?extIdCarryOver=true&sc_cid=7013a000002q6eLAAQ"
+          <a href="https://www.redhat.com/en/trust/RFC-2350"
             >Contacting Information Security
           </a>
         </rh-cta>
@@ -146,6 +144,9 @@
 
 <style scoped>
   .shl-mainContainer {
+    max-width: 1440px;
+    margin: auto;
+    padding: 0px 32px;
     margin-top: 64px;
   }
 
@@ -177,7 +178,6 @@
 
   rh-card::part(container) {
     min-height: 300px;
-    text-overflow: clip;
     border-top: 3px solid #0066cc;
     margin-bottom: 32px;
   }

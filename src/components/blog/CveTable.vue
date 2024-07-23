@@ -70,19 +70,16 @@
 
 <style scoped>
   .cve-table-mainContainer {
-    padding: 32px 0px;
     position: relative;
-    left: 50%;
-    margin-left: -50vw;
-    width: 100vw;
     background: #f3f3f3;
+    margin-top: 64px;
+    padding: 32px 0px;
   }
 
   .cve-table-subContainer {
-    padding: 0px 32px;
-    width: 100%;
-    margin: auto;
     max-width: 1440px;
+    margin: auto;
+    padding: 0px 32px;
   }
 
   pf-th,
