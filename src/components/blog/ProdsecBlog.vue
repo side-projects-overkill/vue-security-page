@@ -21,8 +21,17 @@
             primary objective:
           </p>
           <ul class="sdl-links-list">
-            <li><a>Software supply chain security assurance</a></li>
-            <li><a>Security testing process</a></li>
+            <li>
+              <a
+                href="https://access.redhat.com/articles/software%20_supply_chain_security_assurance"
+                >Software supply chain security assurance</a
+              >
+            </li>
+            <li>
+              <a href="https://access.redhat.com/security_testing_sdl_practice"
+                >Security testing process</a
+              >
+            </li>
           </ul>
         </div>
         <div class="pf-v5-l-grid__item pf-m-0-col pf-m-2-col-on-lg"></div>
@@ -32,12 +41,39 @@
         >
           <h3 class="card-header">About security</h3>
           <ul>
-            <li><a>Life Cycle Security Update Policy</a></li>
-            <li><a>Product Life Cycles</a></li>
-            <li><a>Product Security overview</a></li>
-            <li><a>SDL overview</a></li>
-            <li><a>Security blog </a></li>
-            <li><a>Security glossary</a></li>
+            <li>
+              <a
+                href="https://access.redhat.com/security/lifecycle-security-update-policy"
+                >Life Cycle Security Update Policy</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://access.redhat.com/product-life-cycles/update_policies"
+                >Product Life Cycles</a
+              >
+            </li>
+            <li>
+              <a href="https://access.redhat.com/security/overview/"
+                >Product Security overview</a
+              >
+            </li>
+            <li>
+              <a href="https://access.redhat.com/articles/red_hat_sdl"
+                >SDL overview</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.redhat.com/en/blog/channel/security?extIdCarryOver=true&sc_cid=7013a000002q6eLAAQ"
+                >Security blog
+              </a>
+            </li>
+            <li>
+              <a href="https://access.redhat.com/security/glossary"
+                >Security glossary</a
+              >
+            </li>
           </ul>
         </pf-card>
       </div>
@@ -71,19 +107,56 @@
             <div>
               <h3 class="card-header">Security updates</h3>
               <ul>
-                <li><a>Security advisories</a></li>
-                <li><a>Security bulletins</a></li>
-                <li><a>Security labs</a></li>
+                <li>
+                  <a
+                    href="https://access.redhat.com/security/security-updates/security-advisories"
+                    >Security advisories</a
+                  >
+                </li>
+                <li>
+                  <a href="https://access.redhat.com/security/vulnerabilities"
+                    >Security bulletins</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://access.redhat.com/security/security-updates/security-labs"
+                    >Security labs</a
+                  >
+                </li>
               </ul>
             </div>
             <div>
               <h3 class="card-header">Vulnerabilities</h3>
               <ul>
-                <li><a>CVE database</a></li>
-                <li><a>Incident response plan</a></li>
-                <li><a>Security data</a></li>
-                <li><a>Severity ratings</a></li>
-                <li><a>Vulnerability management</a></li>
+                <li>
+                  <a
+                    href="https://access.redhat.com/security/security-updates/cve"
+                    >CVE database</a
+                  >
+                </li>
+                <li>
+                  <a href="https://access.redhat.com/articles/understanding_irp"
+                    >Incident response plan</a
+                  >
+                </li>
+                <li>
+                  <a href="https://access.redhat.com/security/data"
+                    >Security data</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://access.redhat.com/security/updates/classification/"
+                    >Severity ratings</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://access.redhat.com/security/vulnerability-management"
+                    >Vulnerability management</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
@@ -128,10 +201,30 @@
         >
           <h3 class="card-header">Security and privacy</h3>
           <ul>
-            <li><a>Articles on PCI DSS</a></li>
-            <li><a>Compliance activities and government standards</a></li>
-            <li><a>Red Hat vulnerability scanner certification</a></li>
-            <li><a>Trust Red Hat</a></li>
+            <li>
+              <a
+                href="https://access.redhat.com/search/?q=pci-dss&p=1&sort=relevant&scoped=false"
+                >Articles on PCI DSS</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://access.redhat.com/articles/compliance_activities_and_gov_standards"
+                >Compliance activities and government standards</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://connect.redhat.com/en/partner-with-us/red-hat-vulnerability-scanner-certification?extIdCarryOver=true&sc_cid=7013a000002q6eLAAQ"
+                >Red Hat vulnerability scanner certification</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.redhat.com/en/trust?extIdCarryOver=true&sc_cid=7013a000002q6eLAAQ"
+                >Trust Red Hat</a
+              >
+            </li>
           </ul>
         </pf-card>
       </div>
