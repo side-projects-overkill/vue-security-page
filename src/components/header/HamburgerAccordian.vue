@@ -1,10 +1,10 @@
 <template>
-  <div class="hamburger-menu-accordion-main-container">
-    <pf-accordion>
-      <pf-accordion-header>
-        <h3>{{ menuTitle }}</h3>
-      </pf-accordion-header>
-      <pf-accordion-panel>
+  <div>
+    <rh-accordion>
+      <rh-accordion-header>
+        <p>{{ menuTitle }}</p>
+      </rh-accordion-header>
+      <rh-accordion-panel>
         <div class="pf-v5-l-grid pf-m-gutter">
           <div
             v-for="(categoryLinks, categoryKey) in linksData"
@@ -25,38 +25,46 @@
             </div>
           </div>
         </div>
-      </pf-accordion-panel>
-    </pf-accordion>
-    <hr />
+      </rh-accordion-panel>
+    </rh-accordion>
   </div>
 </template>
 
 <script setup>
-defineProps({
-  menuTitle: String,
-  linksData: Object,
-});
+  defineProps({
+    menuTitle: {
+      type: String,
+      default: '',
+    },
+    linksData: {
+      type: Object,
+      default: () => ({}),
+    },
+  })
 
-const formatTitle = (categoryKey) => {
-  return categoryKey
-    .replace(/([A-Z])/g, " $1")
-    .replace(/^./, (str) => str.toUpperCase());
-};
+  const formatTitle = (categoryKey) => {
+    return categoryKey
+      .replace(/([A-Z])/g, ' $1')
+      .replace(/^./, (str) => str.toUpperCase())
+  }
 </script>
 
 <style scoped>
-.hamburger-menu-accordion-main-container {
-  margin-top: 15px 0px;
-}
+  rh-accordion {
+    margin-top: 15px 0px;
+  }
 
-.hamburger-menu-accordion-main-container p{
-  font-size: 17px;
-  font-weight: 500;
-  text-align: start;
-}
+  rh-accordion p {
+    font-size: 17px;
+    font-weight: 500;
+    text-align: start;
+  }
 
-.hamburger-menu-accordion-main-container a{
-  text-align: start;
-}
+  rh-accordion a {
+    text-align: start;
+  }
 
+  rh-accordion-panel::part(container) {
+    --pf-c-accordion__panel-body--before--BackgroundColor: #ee0000;
+  }
 </style>

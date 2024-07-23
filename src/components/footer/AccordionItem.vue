@@ -1,80 +1,62 @@
 <template>
-  <div class="accordion-main-container">
-    <pf-accordion class="accordion-header-container">
-      <pf-accordion-header class="accordion-header">
-        <h3>{{ title }}</h3>
-      </pf-accordion-header>
-      <pf-accordion-panel class="accordion-panel-container">
-        <div class="pf-v5-l-flex pf-m-space-items-2xl">
-          <div class="pf-v5-l-flex">
-            <div class="pf-v5-l-flex pf-m-column">
-              <div
-                class="pf-v5-l-flex__item"
-                v-for="item in currentLinks"
-                :key="item.text"
-              >
-                <p>
-                  <a :href="item.link">{{ item.text }}</a>
-                </p>
-              </div>
+  <rh-accordion color-palette="darker">
+    <rh-accordion-header>
+      <h3>{{ title }}</h3>
+    </rh-accordion-header>
+    <rh-accordion-panel color-palette="darker">
+      <div class="pf-v5-l-flex pf-m-space-items-2xl">
+        <div class="pf-v5-l-flex">
+          <div class="pf-v5-l-flex pf-m-column">
+            <div
+              v-for="item in currentLinks"
+              :key="item.text"
+              class="pf-v5-l-flex__item"
+            >
+              <p>
+                <a :href="item.link">{{ item.text }}</a>
+              </p>
             </div>
           </div>
         </div>
-      </pf-accordion-panel>
-    </pf-accordion>
-    <hr />
-  </div>
+      </div>
+    </rh-accordion-panel>
+  </rh-accordion>
 </template>
 
-<script setup>
-import "@patternfly/elements/pf-accordion/pf-accordion.js";
-import { footerLinks } from "./linksData";
-import { computed } from "vue";
+<script setup type="module">
+  import '@patternfly/elements/pf-accordion/pf-accordion.js'
+  import { computed } from 'vue'
+  import { footerLinks } from './linksData.js'
 
-const props = defineProps({
-  //Props for Menu Title
-  title: String,
-});
+  const props = defineProps({
+    // Props for Menu Title
+    title: {
+      type: String,
+      default: '',
+    },
+  })
 
-const currentLinks = computed(() => {
-  //Case statements for displaying links data according to menu title
-  switch (props.title) {
-    case "Quick Links":
-      return footerLinks.quickLinks;
-    case "Help":
-      return footerLinks.helpLinks;
-    case "Site Info":
-      return footerLinks.siteInfoLinks;
-    case "Related Sites":
-      return footerLinks.relatedSiteLinks;
-    case "About":
-      return footerLinks.aboutLinks;
-    default:
-      return [];
-  }
-});
+  const currentLinks = computed(() => {
+    // Case statements for displaying links data according to menu title
+    switch (props.title) {
+      case 'Quick Links':
+        return footerLinks.quickLinks
+      case 'Help':
+        return footerLinks.helpLinks
+      case 'Site Info':
+        return footerLinks.siteInfoLinks
+      case 'Related Sites':
+        return footerLinks.relatedSiteLinks
+      case 'About':
+        return footerLinks.aboutLinks
+      default:
+        return []
+    }
+  })
 </script>
 
 <style scoped>
-.accordion-main-container hr {
-  border-color: #707070;
-}
-
-.accordion-header-container {
-  --pf-c-accordion--BackgroundColor: #1f1f1f;
-}
-
-.accordion-header::part(text) {
-  color: #ffffff;
-  font-size: 17px;
-  font-weight: 500;
-}
-
-.accordion-panel-container {
-  --pf-c-accordion__panel-body--before--BackgroundColor: red;
-  & a {
-    color: #ffffff;
-    font-size: 15px;
+  rh-accordion a {
+    color: #fff;
   }
-}
 </style>
