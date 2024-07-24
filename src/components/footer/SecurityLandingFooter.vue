@@ -122,7 +122,6 @@
 </template>
 
 <script setup>
-  import '@patternfly/elements/pf-icon/pf-icon.js'
   import { footerLinks } from './linksData.js'
   import AccordionItem from './AccordionItem.vue'
 

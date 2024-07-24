@@ -27,8 +27,6 @@
 </template>
 
 <script setup>
-  import '@patternfly/elements/pf-table/pf-table.js'
-
   const tableData = [
     {
       cve: 'CVE-2024-41184',

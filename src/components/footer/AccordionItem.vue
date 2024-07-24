@@ -24,7 +24,6 @@
 </template>
 
 <script setup type="module">
-  import '@patternfly/elements/pf-accordion/pf-accordion.js'
   import { computed } from 'vue'
   import { footerLinks } from './linksData.js'
 

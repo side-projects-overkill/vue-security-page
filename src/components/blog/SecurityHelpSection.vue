@@ -112,10 +112,6 @@
 </template>
 
 <script setup>
-  import '@patternfly/elements/pf-select/pf-select.js'
-  import '@patternfly/elements/pf-select/pf-option-group.js'
-  import '@patternfly/elements/pf-button/pf-button.js'
-
   const latestKnowledgeData = [
     {
       heading: "Data Gathered and Used by Red Hat's subscription services",
