@@ -45,4 +45,8 @@
   a {
     font-size: 17px;
   }
+
+  pf-button {
+    --pf-c-button--m-primary--BackgroundColor: transparent;
+  }
 </style>

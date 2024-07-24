@@ -12,7 +12,7 @@
     <hr />
     <div class="pf-v5-l-grid pf-m-gutter-on-sm">
       <div
-        class="pf-v5-l-grid__item pf-m-9-col pf-m-4-col-on-sm pf-m-3-col-on-md pf-m-3-col-on-lg pf-m-2-col-on-xl"
+        class="pf-v5-l-grid__item pf-m-8-col pf-m-4-col-on-sm pf-m-3-col-on-md pf-m-3-col-on-lg pf-m-2-col-on-xl"
       >
         <div class="pf-v5-l-flex__item">
           <img
@@ -22,7 +22,7 @@
         </div>
       </div>
       <div
-        class="pf-v5-l-grid__item pf-m-1-col pf-m-4-col-on-sm pf-m-3-col-on-md pf-m-5-col-on-lg pf-m-7-col-on-xl"
+        class="pf-v5-l-grid__item pf-m-2-col pf-m-4-col-on-sm pf-m-2-col-on-md pf-m-4-col-on-lg pf-m-6-col-on-xl"
       >
         <div class="pf-v5-l-flex menu-container">
           <div
@@ -39,7 +39,7 @@
       </div>
 
       <div
-        class="pf-v5-l-grid__item pf-m-2-col pf-m-4-col-on-sm pf-m-6-col-on-md pf-m-4-col-on-lg pf-m-3-col-on-xl"
+        class="pf-v5-l-grid__item pf-m-2-col pf-m-4-col-on-sm pf-m-7-col-on-md pf-m-5-col-on-lg pf-m-4-col-on-xl"
       >
         <div class="pf-v5-l-flex pf-m-justify-content-flex-end">
           <div class="pf-v5-l-flex__item header-navigation-item menu-item">
@@ -52,10 +52,12 @@
             <AllRedHatModal />
           </div>
           <div class="pf-v5-l-flex__item header-navigation-item menu-item">
-            <i class="fa fa-user"></i>
-            <p>
-              <a href="#" class="navigation-item-text">Log In</a>
-            </p>
+            <pf-button>
+              <i class="fa fa-user"></i>
+              <p>
+                <a href="#">Log In</a>
+              </p>
+            </pf-button>
           </div>
         </div>
       </div>
@@ -122,6 +124,7 @@
     border-top: 3px solid #151515;
     border-radius: 3px;
     padding: 22px 2px;
+    margin-right: 0px;
   }
 
   .menu-item:hover {
@@ -144,6 +147,10 @@
   .header-navigation-item a {
     color: #fff;
     text-decoration: none;
+  }
+
+  pf-button {
+    --pf-c-button--m-primary--BackgroundColor: transparent;
   }
 
   @media screen and (max-width: 1199px) {

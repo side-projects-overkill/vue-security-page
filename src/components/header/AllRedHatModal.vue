@@ -57,4 +57,8 @@
     align-items: center;
     justify-content: center;
   }
+
+  pf-button {
+    --pf-c-button--m-primary--BackgroundColor: transparent;
+  }
 </style>

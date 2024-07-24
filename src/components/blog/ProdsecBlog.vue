@@ -172,9 +172,7 @@
   </div>
 </template>
 
-<script setup>
-  import '@patternfly/elements/pf-card/pf-card.js'
-</script>
+<script setup></script>
 
 <style scoped>
   ::-webkit-scrollbar-thumb {

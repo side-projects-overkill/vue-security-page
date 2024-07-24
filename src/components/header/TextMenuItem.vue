@@ -73,4 +73,8 @@
     font-size: 17px;
     font-weight: 400;
   }
+
+  pf-button {
+    --pf-c-button--m-primary--BackgroundColor: transparent;
+  }
 </style>

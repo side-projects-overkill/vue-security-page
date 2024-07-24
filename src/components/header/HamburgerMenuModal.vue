@@ -43,4 +43,8 @@
     height: 80%;
     top: 340px;
   }
+
+  pf-button {
+    --pf-c-button--m-primary--BackgroundColor: transparent;
+  }
 </style>
