@@ -8,7 +8,17 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 export default defineConfig({
-  plugins: [vue(), vueJsx()],
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) =>
+            tag.startsWith('pf-') || tag.startsWith('rh-'),
+        },
+      },
+    }),
+    vueJsx(),
+  ],
   base: `/${process.env.GITHUB_REPOSITORY?.split('/')[1]}/`,
   resolve: {
     alias: {
