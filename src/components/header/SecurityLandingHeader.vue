@@ -90,6 +90,9 @@
     height: 120px;
     padding: 0 32px;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
   }
 
   .header-container hr {

@@ -3,7 +3,11 @@
     <h1>Secrity help and learning</h1>
     <div class="security-dropdown-container">
       <h2>Security Guides</h2>
-      <pf-select id="security-dropdown" placeholder="Select a product">
+      <pf-select
+        id="security-dropdown"
+        placeholder="Select a product"
+        accessible-label="Red Hat Enterprise Linux"
+      >
         <pf-option-group key="group1" label="Red Hat Enterprise Linux">
           <pf-option><a>Hardening Guide</a></pf-option>
           <pf-option><a>SELinux Guide</a></pf-option>

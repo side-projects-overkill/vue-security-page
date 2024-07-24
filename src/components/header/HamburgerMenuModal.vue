@@ -47,4 +47,10 @@
   pf-button {
     --pf-c-button--m-primary--BackgroundColor: transparent;
   }
+
+  @media screen and (max-width: 767px) {
+    pf-modal::part(dialog) {
+      margin-top: 70px;
+    }
+  }
 </style>
