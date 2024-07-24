@@ -26,13 +26,13 @@ export default defineConfig({
       // '@patternfly/elements': '/node_modules/@patternfly/elements',
     },
   },
-  build: {
-    rollupOptions: {
-      external: [
-        /^@patternfly\/elements*/,
-        /^@rhds\/elements*/,
-        '@patternfly/elements/pf-icon/*',
-      ],
-    },
-  },
+  // build: {
+  //   rollupOptions: {
+  //     external: [
+  //       /^@patternfly\/elements*/,
+  //       /^@rhds\/elements*/,
+  //       '@patternfly/elements/pf-icon/*',
+  //     ],
+  //   },
+  // },
 })
