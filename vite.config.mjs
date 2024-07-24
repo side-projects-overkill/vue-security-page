@@ -28,7 +28,11 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: [/^@patternfly\/elements*/, /^@rhds\/elements*/],
+      external: [
+        /^@patternfly\/elements*/,
+        /^@rhds\/elements*/,
+        '@patternfly/elements/pf-icon/*',
+      ],
     },
   },
 })
