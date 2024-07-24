@@ -23,6 +23,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+      // '@patternfly/elements': '/node_modules/@patternfly/elements',
     },
   },
   build: {
